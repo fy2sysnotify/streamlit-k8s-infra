@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-dashboard
+  namespace: streamlit-monitoring
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: k8s-streamlit-dash.192.168.49.2.nip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: k8s-dashboard
+                port:
+                  number: 80
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.49.2
