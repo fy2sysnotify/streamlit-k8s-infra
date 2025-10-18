@@ -26,4 +26,4 @@ spec:
           - containerPort: 8501
         env:
           - name: PROMETHEUS_ENDPOINT
-            value: "http://prometheus-server.streamlit-monitoring.svc.cluster.local:9090" # Update with your Prometheus service URL if different
+            value: "http://prometheus-kube-prometheus-prometheus.prometheus.svc.cluster.local:9090" # Update with your Prometheus service URL if different
