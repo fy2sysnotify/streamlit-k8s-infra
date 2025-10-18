@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: k8s-streamlit-dash.192.168.49.2.nip.io
+    - host: k8s-streamlit-dash.192.168.49.2.nip.io # Replace with your desired domain. This is a test domain that automatically resolves to Minikube IP (usually 192.168.49.2) using nip.io - a free wildcard DNS service. This is set up for local testing with minikube.
       http:
         paths:
           - path: /
