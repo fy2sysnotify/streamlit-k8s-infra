@@ -67,7 +67,16 @@ argocd app sync k8s-dashboard
 - If using Minikube with `nip.io` configured in the ingress:
 
 ```
-http://k8s-streamlit-dash.<MINIKUBE_IP>.nip.io
+http://k8s-streamlit-dash.<MINIKUBE_IP>.nip.io ### usually <MINIKUBE_IP> = 192.168.49.2
+
+If using minikube under virtual machine like Virtualbox or VMware accesing the Dashboard might require obtaining a 
+node port and appending it to the URL like so:
+http://k8s-streamlit-dash.<MINIKUBE_IP>.nip.io:<NODE_PORT>
+
+<NODE_PORT> can be obtained by looking at the ingress controller service 
+ussually named "ingress-nginx-controller" in the "ingress-nginx" namespace.
+
+If the ingress is not working properly, you can also port-forward the service directly or use a NodePort service type.
 ```
 
 - Enable Minikube ingress addon if not already enabled:
