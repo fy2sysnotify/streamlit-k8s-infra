@@ -22,7 +22,7 @@ spec:
       imagePullSecrets:
         - name: ghcr-secret
       containers:
-      - image: ghcr.io/fy2sysnotify/streamlit-app:main-99ba898a
+      - image: ghcr.io/fy2sysnotify/streamlit-app:main-a0baa2ab
         name: k8s-dashboard
         ports:
           - containerPort: 8501
