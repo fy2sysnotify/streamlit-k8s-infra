@@ -20,7 +20,7 @@ spec:
     spec:
       serviceAccountName: k8s-dashboard-sa
       containers:
-      - image: nginx
+      - image: ghcr.io/fy2sysnotify/streamlit-app:main-2a21c3f4
         name: k8s-dashboard
         ports:
           - containerPort: 8501
