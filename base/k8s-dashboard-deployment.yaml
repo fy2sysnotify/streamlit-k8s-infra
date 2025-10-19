@@ -19,6 +19,8 @@ spec:
         app: k8s-dashboard
     spec:
       serviceAccountName: k8s-dashboard-sa
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - image: ghcr.io/fy2sysnotify/streamlit-app:main-2a21c3f4
         name: k8s-dashboard
