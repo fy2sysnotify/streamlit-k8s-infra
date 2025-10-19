@@ -12,6 +12,8 @@ rules:
   - configmaps
   - nodes
   - namespaces
+  - persistentvolumes
+  - persistentvolumeclaims
   verbs:
   - get
   - list
